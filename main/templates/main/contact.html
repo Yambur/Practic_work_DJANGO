@@ -3,7 +3,6 @@
 {% block content %}
 <div class="album py-5 bg-light">
     <div class="container">
-
         <div class="row">
             <div class="col-md-12">
                 <div class="card mb-4 box-shadow">
@@ -16,21 +15,24 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-12">
-            <div class="card mb-12 box-shadow">
-                <div class="card-body">
-                    <h2>Напишите нам!</h2>
-                    <form method="post">
-                        {% csrf_token %}
-                        <input class="form-control mb-2" name="name"/>
-                        <input class="form-control mb-2" name="email"/>
-                        <textarea class="for,_control mb-2" name="message"></textarea>
-                        <button type="submit" class="m-2 btn btn-primary form form control">Отправить</button>
-                    </form>
-                </div>
-            </div>
+    </div>
+</div>
+
+<div class="col-m-6 offset-m-6">
+    <div class="card mb-12 box-shadow">
+        <div class="card-body">
+            <h2>Напишите нам!</h2>
+            <form method="post">
+                {% csrf_token %}
+                <input class="form-control mb-2" name="name"/>
+                <input class="form-control mb-2" name="email"/>
+                <textarea class="form-control mb-2" name="message"></textarea>
+                <button type="submit" class="mb-2 btn btn-primary form form-control">Отправить</button>
+            </form>
         </div>
     </div>
+</div>
+</div>
 </div>
 {% endblock %}
 
