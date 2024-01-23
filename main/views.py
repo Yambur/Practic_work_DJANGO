@@ -1,15 +1,12 @@
 from django.shortcuts import render
+from django.views.generic import ListView
 
 from main.models import Student
 
 
-def index(request):
-    students_list = Student.objects.all()
-    context = {
-        'object_list': students_list,
-        'title': 'Главная'
-    }
-    return render(request, 'main/index.html', context)
+class StudentListView(ListView):
+    model = Student
+    template_name = 'materials/material_list.html'
 
 
 def contact(request):
